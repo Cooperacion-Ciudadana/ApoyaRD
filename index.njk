@@ -1,0 +1,100 @@
+---
+layout: layouts/home.njk
+titulo_1: En estos tiempos de COVID-19
+titulo_2: apoya el sistema médico de la República Dominicana directamente desde tu casa.
+seccion_necesidades: La gente en los centros de salud está trabajando sin recursos esenciales para proteger el personal y brindar servicio a quienes más lo necesitan.
+necesidades:
+ -
+  icon: icono-mascarilla
+  texto: Mascarillas
+  de: Medical Mask by IcoLabs from the Noun Project
+ -
+  icon: icono-detergentes
+  texto: Detergentes y Disinfectantes
+  de: cleaning supplies by Alexander Gruzdev from the Noun Project
+ -
+  icon: icono-guantes
+  texto: Guantes
+  de: disposable latex gloves by Oleksandr Panasovskyi from the Noun Project
+ -
+  icon: icono-visor
+  texto: Visores, Batas, Ropa Protectiva
+  de: safety doctor clothes by JunGSa from the Noun Project
+ -
+  icon: icono-garafon
+  texto: Agua
+  de: Water Bottle by Nikita Kozin from the Noun Project
+ -
+  icon: icono-toallas
+  texto: Toallas Deshechables
+  de: disposable towel by lastspark from the Noun Project
+ -
+  icon: icono-jabon
+  texto: Jábon de Cuaba
+  de: Hand Washing by Yu luck from the Noun Project
+ -
+  icon: icono-medicina
+  texto: Medicamentos
+  de: medicines by ProSymbols from the Noun Project
+necesidades_cta: Buscamos donaciones de los siguientes artículos
+cta_join:
+  -
+   texto: Soy un Centro de Salud y estas son mis necesidades
+   url: https://airtable.com/shr8QTmbX8Lu03za0
+   icono: icono-hospital
+   color: bg-washed-red
+  -
+   texto: Trabajo en un centro de salud y esto necesito
+   url: https://airtable.com/shrJSLtDbNNLtHqoH
+   icono: icono-trabajadores
+   de: hospital staff by SBTS from the Noun Project
+   color: bg-light-green
+  -
+   texto: Yo quiero donar artículos o dinero
+   url: https://cooperacionciudadana.typeform.com/to/E3xpCK
+   icono: icono-donar
+   de: donation by Made by Made from the Noun Project
+   color: bg-light-red
+  -
+   texto: ¡Yo quiero ser voluntarix!
+   url: mailto:apoyard@cooperacionciudadana.org
+   icono: icono-donadores
+   color: bg-lightest-blue
+link: https://thenounproject.com/search/?q=disinfectant
+about:
+   title: COMO FUNCIONA
+---
+<header class="relative ph4 pt2 pt5-ns pb5 pb6-ns bg-washed-red">
+  <h1 class="relative z-5 roboto fw4 f3 f2-m f1-l fw4 lh-copy l5-title-l bakersfield w-70-ns mv0 tracked-tight">
+    <span class="dark-grey">{{ titulo_1 }}</span>
+    <span class="dark-red db">{{ titulo_2 }}</span>
+  </h1>
+  <div class="header-image">
+    <img src="/img/mapa-rd.svg" class="o-40">
+  </div>
+</header>
+
+<section class="ph4 pt5 pb6">
+  <h1 class="roboto fw3 f3 f2-m f1-l lh-copy tc mb5 ph3-ns pv2 measure center br3">{{ seccion_necesidades }}</h1>
+  <p class="f4 f3-m f2-l lh-title sans-serif tc ttu w-60-ns center mb5 dark-red">{{ necesidades_cta }}</p>
+  {% set items = necesidades %}
+  {% include "icongrid.njk" %}
+</section>
+
+<section class="flex-ns flex-wrap-ns mt4 pb5-ns ph4 center-m">
+  <p class="f4 f3-m f2-l lh-title sans-serif tc ttu w-60-ns center mb6 dark-red">Rellena un breve formulario según sea el caso</p>
+{% for cta in cta_join %}
+  <div class="cta-join-item {{ cta.color }} br3 ph3 pb4 mt4 mb6 grow"><a href="{{ cta.url }}">
+    <p class="f3 f2-l lh-copy tc ph3-m ph5-l">
+      <i role="presentation" class="flex items-center flex-end cta-join-icon center db mb4 w3 h3 w4-ns h4-ns near-black bg-white br-100 ba bw2">
+        <img src="/img/{{ cta.icono }}.svg">
+      </i>
+      {{ cta.texto }}
+    </p>
+    </a>
+  </div>
+{% endfor %}
+</section>
+
+{% set cta = about %}
+{% include "cta.njk" %}

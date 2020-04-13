@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ metadata.title }}</title>
+    <meta name="description" content="{{ metadata.description }}">
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    <link rel="canonical" href="{{ metadata.url }}">
+    <link itemprop="image" href="{{ metadata.url }}/img/{{ metadata.logo }}">
+    <!-- Twitter schema -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" content="{{ metadata.social.twitter }}">
+  </head>
+  <body class="dark-gray">
+    <nav class="flex items-center ph4 pv3 bg-washed-red dark-red">
+      <a href="{{ site.url }}" class="flex flex-auto items-center">
+        <i role="presentation" class="dib w3 h3">
+          <img src="/img/{{ site.logo }}.svg">
+        </i>
+        <span class="f4 dark-red">#{{ site.title }}</span>
+      </a>
+
+      <ul class="tr">
+      {%- for entry in collections.all | eleventyNavigation %}
+        <li class="dib ml3{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+      {%- endfor %}
+      </ul>
+    </nav>
+
+    <main class="{% if templateClass %} {{ templateClass }}{% endif %}">
+
+      {{ content | safe }}
+
+    </main>
+
+    <footer class="dark-gray ph4 ph5-ns pv4 fw3 bb b--near-black bw3">
+      <section>
+        <h4 class="f6 fw3">{{ home.contact.header }}</h4>
+        <nav>
+          <a href="{{ site.url }}" class="flex flex-auto items-center">
+            <i role="presentation" class="dib w2 h2 w3-ns h3-ns">
+              <img src="/img/{{ site.logo }}.svg">
+            </i>
+            <span class="f4-ns dark-red">{{ metadata.email }}</span>
+          </a>
+          <ul class="tr">
+          {%- for social in metadata.social %}
+            <li class="dib ml3">
+              <a href="{{ social.value | url }}">
+                <i role="presentation" class="dib w2 h2">
+                  <img src="/img/icono-social-{{ social.key }}.svg">
+                </i>
+              </a>
+            </li>
+          {%- endfor %}
+          </ul>
+        </nav>
+      </section>
+      <div class="bt b--moon-gray mt4 pt4">
+        <p class="fw6 f6 f5-ns">{{ site.footer.byline }} {{ metadata.copyright.name }}</p>
+        <div class="w5">
+          <img src="/img/{{ metadata.logo }}">
+        </div>
+        <p class="measure f6 lh-copy mb3">{{ metadata.copyright.byline }}</p>
+        <p class="f7 lh-copy mt5 pl6-ns tr">
+          {{ metadata.copyright.license_about }}
+          <a href="{{ metadata.copyright.license_link }}" class="dark-red">
+            {{ metadata.copyright.license }}
+          </a>
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>

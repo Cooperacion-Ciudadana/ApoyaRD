@@ -1,0 +1,8 @@
+<ul class="list flex flex-wrap">
+{% for item in items %}
+  <li class="flex flex-column justify-center items-center bg-white w-50 w-25-l mb4 mb5-l pa1 pa3-ns">
+      <h4 class="sans-serif fw3 f6 f4-ns ttu tc pa3-ns mb0 order-3">{{ item.texto }}</h4>
+      <i role="presentation" class="db w3 h3 w4-ns h4-ns"><img src="/img/{{ item.icon }}.svg"></i>
+  </li>
+{% endfor %}
+</ul>
