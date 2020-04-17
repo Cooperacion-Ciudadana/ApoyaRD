@@ -1,0 +1,55 @@
+---
+layout: layouts/home.njk
+metadata_title: Donar
+metadata_description: Los necesidades de los centros de salud de la Republica Dominicana para efectivamente brindar servicio a sus pacientes de COVID-19.
+eleventyNavigation:
+  key: Donar
+  order: 2
+titulo_1: Apoyando
+titulo_2: vencemos al COVID.
+typeform: https://cooperacionciudadana.typeform.com/to/E3xpCK
+preguntas:
+  -
+   pregunta: ¿Recogen donaciones?
+   repuesta: Sí, nos encargamos de las logisticas para recoger donaciones.
+  -
+   pregunta: ¿Puedeo enviar me donanción?
+   repuesta: Sí, puedes indicar que vas a entregar su donación en la pregunta #2 del formulario. Te contactaremos para coordinar su entrega con el centro de salud.
+  -
+   pregunta: ¿Puedeo especificar a quien quier extender mi donación?
+   repuesta: Claro. Si ves un articulo de la tabla que deseas donar, incluye esa información cuando completas el formulario.
+cta_preguntas_title: Preguntas Frequentes
+---
+
+  <header class="relative ph4 ph5-l pv5 bg-washed-red">
+    <h1 class="relative z-5 roboto fw4 f3 f2-m f1-l fw4 lh-copy l5-title-l bakersfield mv0 tracked-tight tc">
+      <span class="dark-grey">{{ titulo_1 }}</span>
+      <span class="dark-red">{{ titulo_2 }}</span>
+    </h1>
+  </header>
+
+  <article class="bb b--moon-gray flex-l mb5">
+    <header class="lh-copy bg-light-red pa5 measure-wide f4 f3-ns w-50-l order-2-l">
+      <p>Hola, muchas gracias por su deseo de apoyar el sistema de salud de la República Dominica en este tiempo de emergencia.</p>
+
+      <p>Por favor completa este breve formulario. Hay 6 preguntas. Toma menos de 5 minutos.</p>
+
+      <p>
+        <strong class="db">Agradecemos su apoyo!</strong>
+        <span>Equipo #ApoyaRD</span>
+      </p>
+
+      <p class="i f5">Pd. Si no aparece el formulario, <a href="{{ typeform }}" target="_blank" class="bb">dale aquí</a></p>
+    </header>
+
+    <div class="typeform-widget" data-url="https://cooperacionciudadana.typeform.com/to/E3xpCK" data-hide-headers=true data-hide-footer=true style="width: 100%; height: 80vh;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script></div>
+  </article>
+
+
+{% set cta = preguntas %}
+{% set title =  cta_preguntas_title %}
+{% include "cta_preguntas_donar.njk" %}
+
+{% set cta_join_title = cta_join_title %}
+{% set cta_join = participa %}
+{% include "participa.njk" %}

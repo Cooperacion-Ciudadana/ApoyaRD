@@ -1,0 +1,15 @@
+
+<aside class="ph4 ph5-ns mt4">
+    <h3 class="f4 f2-l lh-title ttu dark-red sans-serif fw5">{{ title }}</h3>
+    <p class="f3 bb b--moon-gray pb3 lh-copy roboto fw3 measure-wide">
+    Hay varías formas para apoyar.
+    <a href="mailto:apoyard@cooperacionciudadana.org" class="bb">Escríbenos</a> si quieres particpar o si tienes una pregunta sobre el proceso de donar.</p>
+    <article class="lh-copy roboto fw3 measure-wide">
+    {% for item in cta %}
+      <div class="mb4">
+        <h3 class="mb1 lh-title fw4 dark-red">{{ item.pregunta }}</h3>
+        <p class="f5 f4-ns">{{ item.repuesta }}</p>
+      </div>
+    {% endfor %}
+    </article>
+</aside>
