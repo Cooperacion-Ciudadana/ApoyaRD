@@ -1,0 +1,18 @@
+<section class="mt4 pb5-ns ph6-ns mt3 mt5-ns center-m">
+  <h2 class="f4 f2-l lh-title ttu dark-red sans-serif fw5 center tc mb6">
+    {{ cta_join_title }}
+  </h2>
+  <div class="flex-ns flex-wrap-ns">
+  {% for cta in cta_join %}
+    <div class="cta-join-item {{ cta.color }} br3 ph3 pb4 mt4 mb6 grow"><a href="{{ cta.url }}">
+      <p class="f3 f2-l lh-copy tc ph3-m ph5-l">
+        <i role="presentation" class="flex items-center flex-end cta-join-icon center db mb4 w3 h3 w4-ns h4-ns near-black bg-white br-100 ba bw2">
+          <img src="/img/{{ cta.icono }}.svg">
+        </i>
+        {{ cta.texto }}
+      </p>
+      </a>
+    </div>
+  {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,27 @@
+[{
+    "texto": "Soy un Centro de Salud y estas son mis necesidades",
+    "url": "https://airtable.com/shr8QTmbX8Lu03za0",
+    "icono": "icono-hospital",
+    "color": "bg-washed-red"
+  },
+  {
+    "texto": "Trabajo en un centro de salud y esto necesito",
+    "url": "https://airtable.com/shrJSLtDbNNLtHqoH",
+    "icono": "icono-trabajadores",
+    "de": "hospital staff by SBTS from the Noun Project",
+    "color": "bg-light-green"
+  },
+  {
+    "texto": "Yo quiero donar artículos o dinero",
+    "url": "https://cooperacionciudadana.typeform.com/to/E3xpCK",
+    "icono": "icono-donar",
+    "de": "donation by Made by Made from the Noun Project",
+    "color": "bg-light-red"
+  },
+  {
+    "texto": "¡Yo quiero ser voluntarix!",
+    "url": "mailto:apoyard@cooperacionciudadana.org",
+    "icono": "icono-donadores",
+    "color": "bg-lightest-blue"
+  }
+]
