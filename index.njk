@@ -38,6 +38,8 @@ necesidades:
   texto: Medicamentos
   de: medicines by ProSymbols from the Noun Project
 necesidades_cta: Buscamos donaciones de los siguientes artículos
+necesidades_link: Ve todos los necesidades
+necesidades_url: /necesidades
 cta_join_title: Rellena un breve formulario según sea el caso
 about:
    title: COMO FUNCIONA
@@ -57,6 +59,11 @@ about:
   <p class="f4 f3-m f2-l lh-title sans-serif tc ttu w-60-ns center mb5 dark-red">{{ necesidades_cta }}</p>
   {% set items = necesidades %}
   {% include "icongrid.njk" %}
+  <p class="tc">
+    <a href="{{ necesidades_url }}" class="dib br3 fw5 bg-light-red white pa3 grow">
+      {{ necesidades_link }}
+    </a>
+  </p>
 </section>
 
 {% set cta_join_title = cta_join_title %}
