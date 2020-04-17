@@ -2,8 +2,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   padding: 0;
   margin: 0;
   height: 100vh;
@@ -12,8 +11,7 @@ body {
   background-color: var(--white);
 }
 
-ul,
-ol {
+ul, ol {
   padding: 0;
   margin: 0;
 }
@@ -22,8 +20,7 @@ a {
   text-decoration: none;
 }
 
-svg,
-img {
+svg, img {
   width: 100%;
   height: 100%
 }
@@ -48,21 +45,22 @@ a[href]:visited {
 }
 
 .cta-join-icon {
-  margin-top: -6.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
 }
-
 
 @media screen and (min-width: 30em) {
   .cta-join-item {
     width: 48%;
   }
-
   .cta-join-item:nth-of-type(odd) {
     margin-right: 2%;
   }
-
   .cta-join-item:nth-of-type(even) {
     margin-left: 2%;
+  }
+  .cta-join-icon {
+    margin-top: -6.5rem;
   }
 }
 
@@ -70,13 +68,11 @@ table {
   margin: 1em 0;
 }
 
-table td,
-table th {
+table td, table th {
   padding-right: 1em;
 }
 
-pre,
-code {
+pre, code {
   font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
   line-height: 1.5;
 }
@@ -101,14 +97,10 @@ pre {
   background-color: #f6f6f6;
 }
 
-a[href].direct-link,
-a[href].direct-link:visited {
+a[href].direct-link, a[href].direct-link:visited {
   color: transparent;
 }
 
-a[href].direct-link:focus,
-a[href].direct-link:focus:visited,
-:hover > a[href].direct-link,
-:hover > a[href].direct-link:visited {
+a[href].direct-link:focus, a[href].direct-link:focus:visited, :hover>a[href].direct-link, :hover>a[href].direct-link:visited {
   color: #aaa;
 }
