@@ -1,0 +1,38 @@
+---
+layout: layouts/home.njk
+metadata_title: Necesidades Urgentes
+metadata_description: Los necesidades de los centros de salud de la Republica Dominicana para efectivamente brindar servicio a sus pacientes de COVID-19.
+eleventyNavigation:
+  key: Necesidades
+  order: 2
+titulo_1: Estos son los necesidades más urgentes de los centros de salud.
+titulo_2: Apoyanlos donando.
+seccion_necesidades: La gente en los centros de salud está trabajando sin recursos esenciales para proteger el personal y brindar servicio a quienes más lo necesitan.
+preguntas:
+  -
+   pregunta: ¿De donde viene la información?
+   repuesta: Los centros de salud sumiten un formulario o ApoyaRD los contacta directamente a través de correo o telefono.
+  -
+   pregunta: ¿Donde está el nombre del centro de salud?
+   repuesta: Muchos centros de salud nos pidieron anonomía dentro de la plataforma. El numero en la columna "Hospital ID" corresponde a un centro de salud. Mostramos el municipio y la provincia donde se encuentra el centro.
+cta_join_title: Participa con ApoyaRD
+cta_preguntas_title: Preguntas Frequentes
+---
+<header class="relative ph5 pt2 pt5-ns pb5 pb6-ns bg-washed-red">
+  <h1 class="relative z-5 roboto fw4 f3 f2-m f1-l fw4 lh-copy l5-title-l bakersfield w-70-ns mv0 tracked-tight">
+    <span class="dark-grey">{{ titulo_1 }}</span>
+    <span class="dark-red db">{{ titulo_2 }}</span>
+  </h1>
+</header>
+
+<div class="h-80 bb b--moon-gray">
+  <iframe class="airtable-embed" src="https://airtable.com/embed/shr6FJdd74nJKAj7j?backgroundColor=red&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="600px"></iframe>
+</div>
+
+{% set cta = preguntas %}
+{% set title =  cta_preguntas_title %}
+{% include "cta_preguntas.njk" %}
+
+{% set cta_join_title = cta_join_title %}
+{% set cta_join = participa %}
+{% include "participa.njk" %}

@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ metadata.title }}</title>
-    <meta name="description" content="{{ metadata.description }}">
+    <title>{% if metadata_title %}{{ metadata_title }} - {% endif %}{{metadata.title}} {{ metadata.copyright.name }}</title>
+    <meta name="description" content="{{ metadata_description }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="{{ '/css/tacyhons.css' | url }}">
+    {# <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/> #}
     <link rel="canonical" href="{{ metadata.url }}">
     <link itemprop="image" href="{{ metadata.url }}/img/{{ metadata.logo }}">
     <!-- Twitter schema -->
