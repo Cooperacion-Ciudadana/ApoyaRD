@@ -38,30 +38,7 @@ necesidades:
   texto: Medicamentos
   de: medicines by ProSymbols from the Noun Project
 necesidades_cta: Buscamos donaciones de los siguientes artículos
-cta_join:
-  -
-   texto: Soy un Centro de Salud y estas son mis necesidades
-   url: https://airtable.com/shr8QTmbX8Lu03za0
-   icono: icono-hospital
-   color: bg-washed-red
-  -
-   texto: Trabajo en un centro de salud y esto necesito
-   url: https://airtable.com/shrJSLtDbNNLtHqoH
-   icono: icono-trabajadores
-   de: hospital staff by SBTS from the Noun Project
-   color: bg-light-green
-  -
-   texto: Yo quiero donar artículos o dinero
-   url: https://cooperacionciudadana.typeform.com/to/E3xpCK
-   icono: icono-donar
-   de: donation by Made by Made from the Noun Project
-   color: bg-light-red
-  -
-   texto: ¡Yo quiero ser voluntarix!
-   url: mailto:apoyard@cooperacionciudadana.org
-   icono: icono-donadores
-   color: bg-lightest-blue
-link: https://thenounproject.com/search/?q=disinfectant
+cta_join_title: Rellena un breve formulario según sea el caso
 about:
    title: COMO FUNCIONA
 ---
@@ -82,20 +59,9 @@ about:
   {% include "icongrid.njk" %}
 </section>
 
-<section class="flex-ns flex-wrap-ns mt4 pb5-ns ph4 center-m">
-  <p class="f4 f3-m f2-l lh-title sans-serif tc ttu w-60-ns center mb6 dark-red">Rellena un breve formulario según sea el caso</p>
-{% for cta in cta_join %}
-  <div class="cta-join-item {{ cta.color }} br3 ph3 pb4 mt4 mb6 grow"><a href="{{ cta.url }}">
-    <p class="f3 f2-l lh-copy tc ph3-m ph5-l">
-      <i role="presentation" class="flex items-center flex-end cta-join-icon center db mb4 w3 h3 w4-ns h4-ns near-black bg-white br-100 ba bw2">
-        <img src="/img/{{ cta.icono }}.svg">
-      </i>
-      {{ cta.texto }}
-    </p>
-    </a>
-  </div>
-{% endfor %}
-</section>
+{% set cta_join_title = cta_join_title %}
+{% set cta_join = participa %}
+{% include "participa.njk" %}
 
 {% set cta = about %}
 {% include "cta.njk" %}
